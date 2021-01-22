@@ -17,25 +17,26 @@ public class Lab_1 {
 	 */
 	public static void main(String[] args) {
 		Calendar Start = Calendar.getInstance(); 
-		long StartTime = Start.getTimeInMillis();
+		long StartTime = Start.getTimeInMillis(); //Getting the start time in millimeters
 		System.out.println("Start Time:"+StartTime);
 		
 		String s,reverse= "";
-		Scanner stringEntered = new Scanner(System.in);
+		Scanner stringEntered = new Scanner(System.in); // Scanner to allow input from user
 		
 		
 	
 		try {
 			System.out.println("Enter the String to be reversed");
 			String str = stringEntered.nextLine();
-			int length=str.length();
+			//Reversing the string
+			int length=str.length(); //setting the lenght to the input given
 			for(int i=length-1;i>=0;i--)
 			  reverse=reverse+str.charAt(i);
 			System.out.println("Reversed string: "+reverse);
 			
 			
 			Calendar End = Calendar.getInstance(); 
-			long EndTime = Start.getTimeInMillis();
+			long EndTime = Start.getTimeInMillis();//Getting the End time in millimeters
 			System.out.println("End Time:"+EndTime);
 			System.out.println("Execution Time ------>" + (EndTime - StartTime));
 			
